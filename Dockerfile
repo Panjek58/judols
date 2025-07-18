@@ -1,6 +1,6 @@
 # Multi-stage build for Vue.js application
 # Stage 1: Build the application
-FROM node:18-alpine as build-stage
+FROM node:18-alpine AS build-stage
 
 # Set working directory
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Serve the application with Nginx
-FROM nginx:alpine as production-stage
+FROM nginx:alpine AS production-stage
 
 # Copy built application from build stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html

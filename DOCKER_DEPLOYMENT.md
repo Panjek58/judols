@@ -27,7 +27,7 @@ docker-compose down
 docker build -t opensourcecasino .
 
 # Run the container
-docker run -d -p 8080:80 --name opensourcecasino-app opensourcecasino
+docker run -d -p 80:80 --restart unless-stopped -e NODE_ENV=production --name opensourcecasino-app opensourcecasino
 
 # View logs
 docker logs -f opensourcecasino-app
@@ -39,7 +39,7 @@ docker rm opensourcecasino-app
 
 ## Access the Application
 
-Once running, access your application at: http://localhost:8080
+Once running, access your application at: http://localhost
 
 ## Docker Configuration Details
 
@@ -63,7 +63,7 @@ Custom Nginx configuration includes:
 
 Defines the service configuration:
 
-- Maps port 8080 on host to port 80 in container
+- Maps port 80 on host to port 80 in container
 - Sets up a custom network
 - Configures restart policy
 
