@@ -43,3 +43,35 @@ Get test coverage:
 ```
 npm run coverage
 ```
+
+## Docker Deployment 🐳
+
+Deploy the application using Docker for production:
+
+### Quick Start with Docker Compose
+
+```bash
+# Build and start the application
+docker-compose up -d
+
+# Access the application at http://localhost:8080
+```
+
+### Using PowerShell (Windows)
+
+```powershell
+# Run the deployment script
+.\deploy.ps1
+```
+
+### Manual Docker Commands
+
+```bash
+# Build the image
+docker build -t opensourcecasino .
+
+# Run the container
+docker run -d -p 8080:80 --name opensourcecasino-app opensourcecasino
+```
+
+For detailed Docker deployment instructions, see [DOCKER_DEPLOYMENT.md](DOCKER_DEPLOYMENT.md).

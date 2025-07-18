@@ -13,7 +13,7 @@ export default {
       lastReward: 0,
       spinning: false,
       colors: ["dark-blue", "light-blue"],
-      buttonSound: new Audio("spin.mp3"),
+      buttonSound: new Audio("/spin.mp3"),
       end: false,
     };
   },

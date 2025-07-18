@@ -1,0 +1,15 @@
+services:
+  opensourcecasino:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: opensourcecasino-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - casino-network
+
+networks:
+  casino-network:
+    driver: bridge

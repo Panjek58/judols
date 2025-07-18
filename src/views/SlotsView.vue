@@ -16,7 +16,7 @@ export default {
       lastPlacedBet: 0,
       lastReward: 0,
       autospinning: false,
-      buttonSound: new Audio("spin.mp3"),
+      buttonSound: new Audio("/spin.mp3"),
       end: false,
     };
   },
